@@ -1,0 +1,63 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">创建班级</view>
+    <view class="page__desc">{{role}}</view>
+  </view>
+  <view class="page__bd">
+    <view>
+      <text>学校：{{school}}</text>
+    </view>
+    <form bindsubmit='classSubmit'>
+      <view class="weui-cells__title">班级设定：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">年级</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindPickerChange" value="{{gradeindex}}" range="{{gradearray}}" name="grade">
+              <view class="picker">
+                {{gradearray[gradeindex]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">第几班</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindPickerChange" value="{{classindex}}" range="{{classarray}}" name="class">
+              <view class="picker">
+                {{classarray[classindex]}}
+              </view>
+            </picker>
+          </view>
+
+        </view>
+
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">暗号</view>
+          </view>
+          <view class="weui-cell__bd">
+
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">我是班主任</view>
+          </view>
+          <view class="weui-cell__bd">
+
+          </view>
+        </view>
+    
+  </view>
+  <button form-type='submit'>确定</button>
+  <button form-type='reset'>重设</button>
+  </form>
+</view>
+</view>

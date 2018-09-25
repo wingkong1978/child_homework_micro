@@ -1,0 +1,5 @@
+/* pages/public/add_announcement.wxss */
+.confirmBtn {
+  background:#4682b4;
+  color:#fff;
+}

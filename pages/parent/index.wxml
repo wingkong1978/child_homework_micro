@@ -1,0 +1,44 @@
+<import src="../tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{tabbar}}" />
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+ <block wx:for="{{announcements}}" wx:key="index">
+            <!--<view class="weui-cells__title">{{item.ann_title}}</view>-->
+            <view class="weui-cells weui-cells_after-title">
+              <navigator url='../public/announcement_detail?annc_id={{item.id}}'>
+                <view class="weui-cell">
+                  <view class="weui-cell__bd">{{item.ann_title}}</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access">{{item.create_time}}</view>
+                </view>
+
+              </navigator>
+
+
+              <view class='weui_cell'>
+                <view class="weui-cell__ft">
+                  <button class='weui-btn mini-btn' type='defult' size='mini' bindtap='anncreadlist' id="{{item.id}}">家长已阅情况</button>
+                </view>
+              </view>
+
+
+            </view>
+          </block>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
+      </view>
+    </view>
+  </view>
+</view>

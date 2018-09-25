@@ -1,0 +1,31 @@
+<import src="../tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{tabbar}}" />
+<view class="page">
+  <view class="page__hd">
+  <!--  <view class="page__title">学校</view>
+    <view class="page__desc">列表</view>-->
+  </view>
+  <view class="page__bd">
+    <form bindsubmit='schoolsubmit'>
+        <view class="weui-cells__title">学校</view>
+        <view class="weui-cells weui-cells_after-title">
+            <radio-group bindchange="radioChange" name="school">
+                <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="value">
+                    <radio class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
+
+                    <view class="weui-cell__bd">{{item.value}}</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                        <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                    </view>
+                </label>
+            </radio-group>
+        </view>
+        <view class='weui-cell'>
+      <button form-type='submit' class="confirmBtn">确定</button>
+      <button form-type='reset' type='default'>重设</button>
+      </view>
+    </form>
+
+
+  </view>
+</view>

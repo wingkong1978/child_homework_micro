@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/navigator",
+    "pages/teacher/register",
+    "pages/teacher/login",
+    "pages/teacher/index",
+      "pages/teacher/main",
+    "pages/parent/index",
+    "pages/parent/changenickname",
+    "pages/parent/set_relationship",
+    "pages/public/homework_detail",
+    "pages/public/add_homework",
+    "pages/public/homework_list",
+    "pages/public/school_list",
+    "pages/public/class_list",
+      "pages/public/annc_read_list",
+      "pages/public/add_announcement",
+      "pages/public/announcement_detail",
+      "pages/public/homework_read_list",
+      "pages/public/my_setting",
+      "pages/public/create_class",
+      "pages/public/about_us",
+      "pages/public/password",
+
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4682b4",
+    "navigationBarTitleText": "派作业",
+    "navigationBarTextStyle":"white",
+    "backgroundColor":"#4682b4"
+  }
+  
+  
+}

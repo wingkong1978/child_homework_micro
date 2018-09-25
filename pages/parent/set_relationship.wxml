@@ -1,0 +1,70 @@
+<!--pages/parent/set_relationship.wxml-->
+<view class='page'>
+  <view class="page__hd">
+
+  </view>
+  <view class="page__bd">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <!-- <view class="weui-cells__title">小孩信息：</view> -->
+      <!-- <view class="weui-cells weui-cells_after-title"> -->
+
+          <view class="weui-cells__title">小盆友</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">
+              <view class='weui-btn-area'>
+                <picker bindchange="bindPickerChange" value="{{childrenindex}}" range="{{children}}">
+                  <view class="picker">
+                    {{children[childrenindex]}}
+                  </view>
+                </picker>
+              </view>
+              </view>
+            </view>
+          </view>
+        
+          <view class="weui-cells__title"> 你的孩子：</view>
+          <view class="weui-cells weui-cells_after-title">
+        
+              <view class="weui-cell">
+               <view class="weui-cell__bd">
+                {{childnames}}
+              </view>
+               <view class="weui-cell__ft">
+                  <view class='weui-btn-area'>
+                    <button type="default" size='mini' bindtap="resetChildren">重选</button>
+                  </view>
+               </view>
+         </view>
+          </view>
+
+
+
+              <view class="weui-cells__title">你是孩子的？</view>
+              <view class="weui-cells weui-cells_after-title">
+                <radio-group bindchange="radioChange" name="relationship">
+                  <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+                    <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+
+                    <view class="weui-cell__bd">{{item.name}}</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                      <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                    </view>
+                  </label>
+                </radio-group>
+
+              </view>
+
+
+
+
+     
+  
+      <view class='weui-btn-area'>
+        <button  class='weui-btn confirmBtn' form-type='submit'>确定</button>
+        <button type='default' class='weui-btn'>取消</button>
+      </view>
+    </form>
+  </view>
+
+</view>

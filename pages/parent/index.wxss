@@ -1,0 +1,2 @@
+/* pages/parent/index.wxss */
+@import "/pages/tabbar/tabbar.wxss"

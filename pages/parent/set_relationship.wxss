@@ -1,0 +1,15 @@
+/* pages/parent/set_relationship.wxss */
+.save-btn,
+.cancel-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top:30rpx; 
+    border-radius: 6rpx;
+    box-sizing: border-box;
+}
+.save-btn{
+    background-color: #cde640;
+    color:#fff;
+}

@@ -1,0 +1,16 @@
+/* pages/public/class_list.wxss */
+.share-btn 
+{ 
+width:100%; 
+background: #4682b4;
+color:#fff; 
+position:fixed; 
+bottom:0; 
+} 
+
+
+
+.confirmBtn {
+  background:#4682b4;
+  color:#fff;
+}

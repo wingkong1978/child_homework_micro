@@ -1,0 +1,20 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">具体公告</view>
+        <view class="page__desc">{{anncId}}</view>
+    </view>
+    <view class="page__bd">
+    <view class="weui-cells">
+      <view class='weui-cell'>
+      <block wx:for="{{imagefiles}}" wx:key="*this">
+      <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+      <image src='{{item}}' mode="aspectFill" class="weui-uploader__img" ></image>
+      </view>
+      </block>
+    </view>
+    <view class='weui-cell'>
+      <button bindtap='confirmRead'>已阅</button>
+    </view>
+    </view>
+    </view>
+</view>

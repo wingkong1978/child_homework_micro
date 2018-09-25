@@ -1,0 +1,28 @@
+/* pages/teacher/main.wxss */
+@import "/pages/tabbar/tabbar.wxss";
+.tabOn{
+  color: #4682b4!important;
+}
+.share-btn 
+{ 
+/* width:100%;  */
+background:linear-gradient(#4682b4,#aaa);
+ margin-top: 30rpx;
+ font-size: 50rpx;
+  font-weight: 500;
+color:#fff; 
+position:fixed; 
+bottom:60rpx; 
+border-radius:80rpx;
+left:42%;
+width: 120rpx;
+height: 120rpx;
+z-index: 999;
+border: 4px solid;
+} 
+
+
+.confirmBtn {
+  background:#4682b4;
+  color:#fff;
+}

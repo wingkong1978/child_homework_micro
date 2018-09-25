@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="page container test">
+  
+  <view class="userinfo" >
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <view class='weui-cell__hd'>
+        <image bindtap="bindViewTap" style='width:100px;height:100px' src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <!--<text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
+      </view>
+    </block>
+    <button open-type="getUserInfo" lang="zh_CN" hidden='true'>获取用户信息</button>
+    <button open-type="openSetting" hidden='true'>打开授权</button>
+  </view>
+  <view class="usermotto">
+    <text style='font-size:50px;color:#4682b4'>{{motto}}</text>
+  </view>
+  <view class="index-block">
+    <view bindtap="bindTeacher" class="index-item">
+      <view class="indexflex">
+       <image class="index-item-img" src="../images/t.png"/>
+        <view class="index-item-name"> 我是老师</view>
+      </view>
+    </view>
+    <view bindtap="bindParent" class="index-item">
+      <view class="indexflex">
+      <image class="index-item-img" src="../images/parent.png"/>
+        <view class="index-item-name"> 我是家长</view>
+      </view>
+    </view>
+  </view>
+ </view>
