@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/index/navigator",
+    "pages/index/auth",
     "pages/teacher/register",
     "pages/teacher/login",
     "pages/teacher/index",

@@ -62,7 +62,7 @@ Page({
   },
   formSubmit: function(e) {
     console.log(e.detail);
-    let studentname = e.detail.value.studentname;
+    let childnames = e.detail.value.childnames;
     let relationshipname = this.data.radioItems[e.detail.value.relationship].name;
     let that = this;
     console.log(studentname, relationshipname);
@@ -71,7 +71,7 @@ Page({
       method: "POST",
       data: {
         userid: this.data.userId,
-        studentname: studentname,
+        childnames: childnames,
         relationshipname: relationshipname
       },
       success: function(res) {
