@@ -3,4 +3,22 @@
 .confirmBtn {
   background:#4682b4;
   color:#fff;
+  margin-right: 15px;
+  margin-left: 15px; 
 }
+
+.content{
+  margin-top: 120px;
+  justify-content: center;
+}/*居中 “二年（4）班 暗号”标题*/
+
+.middle{
+  position: absolute;
+  width: 284px;
+  height: 160px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}/*居中输入框*/
