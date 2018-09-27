@@ -26,3 +26,13 @@ border: 4px solid;
   background:#4682b4;
   color:#fff;
 }
+
+.color{
+  background-color: rgba(21, 255, 0, 0.438);
+  margin-right: 10px;
+}
+
+.style{
+  margin-top: 2px; 
+  border: 1px solid #fff;
+}

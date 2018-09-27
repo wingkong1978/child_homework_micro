@@ -3,3 +3,11 @@
   background:#4682b4;
   color:#fff;
 }
+
+.border{
+  border: 1px solid;
+  border-bottom-color: #d0d0d0; 
+  border-top-color: #fff;
+  border-right-color: #fff;
+  border-left-color: #fff;
+}

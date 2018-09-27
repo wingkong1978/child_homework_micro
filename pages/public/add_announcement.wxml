@@ -1,22 +1,22 @@
 <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
   <view class="page__hd">
-    <view class="page__title">创建公告</view>
+    <view class="page__title border" style='text-align:center'>创建公告</view>
     <view class="page__desc">{{role}}</view>
   </view>
   <view class="page__bd">
 
     <form bindsubmit='announcementSubmit'>
-      <view class='weui-cells__title' style='background:#012'>
+      <view class='weui-cells__title' style='color:black'>
           
       学校:{{schoolname}} 班级：{{classno}}</view>
-      <view class='weui-cells weui-cells_after-title'>
+      <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
             <input class="weui-input" placeholder="标题" name="title" />
           </view>
         </view>
       </view>
-      <view class="weui-cells__title">公告内容</view>
+      <view class="weui-cells__title" style='color:black'>公告内容</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell ">
 

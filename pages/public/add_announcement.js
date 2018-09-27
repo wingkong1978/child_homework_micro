@@ -13,7 +13,8 @@ Page({
     userinfo:{},
     imagefiles:[],
     recordPath:"",
-    classname:""
+    classname:"",
+    schoolname:"西关培正小学"
   },
 
   /**

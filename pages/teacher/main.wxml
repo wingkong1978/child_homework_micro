@@ -3,6 +3,7 @@
 <view class="page">
   <view class="page__bd">
     <view class="weui-tab">
+
       <view class="weui-navbar">
         <block wx:for="{{tabs}}" wx:key="*this">
           <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on tabOn' : ''}}" bindtap="tabClick">
@@ -12,10 +13,12 @@
         <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);background-color:#4682b4"></view>
       </view>
       <view class="weui-tab__panel">
+      
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+
           <block wx:for="{{announcements}}" wx:key="index">
             <!--<view class="weui-cells__title">{{item.ann_title}}</view>-->
-            <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cells weui-cells_after-title style">
               <navigator url='../public/announcement_detail?annc_id={{item.id}}'>
                 <view class="weui-cell">
                   <view class="weui-cell__bd">{{item.ann_title}}</view>
@@ -27,7 +30,7 @@
 
               <view class='weui_cell'>
                 <view class="weui-cell__ft">
-                  <button class='weui-btn mini-btn' type='defult' size='mini' bindtap='anncreadlist' id="{{item.id}}">家长已阅情况</button>
+                  <button class='weui-btn mini-btn color' type='defult' size='mini' bindtap='anncreadlist' id="{{item.id}}">家长已阅情况</button>
                 </view>
               </view>
 
