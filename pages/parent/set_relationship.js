@@ -9,12 +9,8 @@ Page({
     childrenindex:0,
     childnames:[],
 
-  checkboxItems: [
-      { name: '耙耙', value: '0', checked: true },
-      { name: '妈妈', value: '1' },
-      { name: '祖辈', value: '2' }
-    ],
-   /* radioItems: [{
+  
+    radioItems: [{
         name: '耙耙',
         value: '0',
         checked: true
@@ -28,7 +24,7 @@ Page({
         value: '2'
       }
 
-    ],*/
+    ],
     classno: 0,
     userId: 0
   },
@@ -54,7 +50,7 @@ Page({
       childnames:[]
     });
   },
-  /*radioChange: function(e) {
+  radioChange: function(e) {
     console.log('radio发生change事件，携带value值为：', e.detail.value);
 
     var radioItems = this.data.radioItems;
@@ -65,26 +61,10 @@ Page({
     this.setData({
       radioItems: radioItems
     });
-  },*/
-  checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value);
-
-    var checkboxItems = this.data.checkboxItems, values = e.detail.value;
-    for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
-      checkboxItems[i].checked = false;
-
-      for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
-        if (checkboxItems[i].value == values[j]) {
-          checkboxItems[i].checked = true;
-          break;
-        }
-      }
-    }
-
-    this.setData({
-      checkboxItems: checkboxItems
-    });
   },
+  
+
+    
   formSubmit: function(e) {
     console.log(e.detail);
     let childnames = e.detail.value.childnames;
