@@ -28,7 +28,7 @@ border: 4px solid;
 }
 
 .color{
-  background-color: rgba(21, 255, 0, 0.438);
+  background-color: rgba(43, 209, 28, 0.658);
   margin-right: 10px;
 }
 
@@ -36,3 +36,4 @@ border: 4px solid;
   margin-top: 2px; 
   border: 1px solid #fff;
 }
+
