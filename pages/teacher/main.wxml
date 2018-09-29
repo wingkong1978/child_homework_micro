@@ -13,7 +13,7 @@
         <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);background-color:#4682b4"></view>
       </view>
       <view class="weui-tab__panel">
-      
+
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
 
           <block wx:for="{{announcements}}" wx:key="index">
@@ -37,6 +37,11 @@
 
             </view>
           </block>
+
+          <view class="section">
+            <view class="flex-wrp" style="height: 52px;flex-direction:column;">
+            </view>
+          </view>
 
           <view align="center">
             <image class='share-btn' bindtap="addAnnc" src='../images/add.png'>+</image>
