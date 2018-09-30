@@ -1,2 +1,11 @@
 /* pages/parent/index.wxss */
-@import "/pages/tabbar/tabbar.wxss"
+@import "/pages/tabbar/tabbar.wxss";
+.color{
+  background-color: rgba(43, 209, 28, 0.658);
+  margin-right: 10px;
+}
+
+.style{
+  margin-top: 2px; 
+  border: 1px solid #fff;
+}

@@ -19,7 +19,7 @@
         </view>    
 <!--更改的按钮属性 -->
         <view class="weui-btn-area">
-            <button class="weui-btn" type="primary" bindtap="showTopTips" formType="submit">确定</button>
+            <button class="weui-btn" type="primary"  formType="submit">确定</button>
         </view>
 
         <button class="confirmBtn" formType="reset" type='default'>重设</button>

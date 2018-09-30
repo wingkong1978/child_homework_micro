@@ -51,12 +51,7 @@ Page({
       }
     })
   },
-  anncreadlist: function (e) {
-    console.log(e);
-    wx.navigateTo({
-      url: '../public/annc_read_list?annc_id=' + e.target.id,
-    })
-  },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

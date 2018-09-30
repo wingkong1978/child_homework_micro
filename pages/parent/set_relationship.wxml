@@ -62,7 +62,7 @@
   
       <view class='weui-btn-area'>
         <button  class='weui-btn confirmBtn' form-type='submit'>确定</button>
-        <button type='default' class='weui-btn'>取消</button>
+        <button type='default' class='weui-btn' bindtap='cancel'>取消</button>
       </view>
     </form>
   </view>

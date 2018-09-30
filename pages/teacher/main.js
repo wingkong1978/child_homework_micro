@@ -8,8 +8,8 @@ Page({
    */
   data: {
     tabs:[
-      // "公告","作业","打卡"
-      "公告"
+       "公告","作业","打卡"
+      //"公告"
     ],
     activeIndex: 0,
     sliderOffset: 0,
@@ -21,7 +21,7 @@ Page({
         title: "公告1",
         create_time:"2018-07-22 01:00"
       },
-            {
+      {
         id: 1,
         title: "公告2",
         create_time: "2018-07-22 01:00"

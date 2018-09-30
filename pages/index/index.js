@@ -179,17 +179,17 @@ Page({
               fail: function() {
                 console.log("failed");
                 wx.hideLoading();
-                     wx.showModal({
-                       title: '警告通知',
-                       content: '您点击了拒绝授权,将无法正常显示个人信息,点击确定重新获取授权。',
-                       success: function (res) {
-                         if (res.confirm) {
-                           console.log("res.confirm",res.confirm);
-                           wx.navigateTo({
-        
-                             url: './auth',
-                           })
-                           /*
+                wx.showModal({
+                  title: '警告通知',
+                  content: '您点击了拒绝授权,将无法正常显示个人信息,点击确定重新获取授权。',
+                  success: function(res) {
+                    if (res.confirm) {
+                      console.log("res.confirm", res.confirm);
+                      wx.navigateTo({
+
+                        url: './auth',
+                      })
+                      /*
                 wx.openSetting({
                   success: (res) => {
                     console.log("res-->", res);
@@ -234,7 +234,7 @@ Page({
                   }
                 })
 */
-                }
+                    }
                   }
                 })
               },

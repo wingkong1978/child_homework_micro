@@ -29,7 +29,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#4682b4",
-    "navigationBarTitleText": "派作业",
+    "navigationBarTitleText": "首页",
     "navigationBarTextStyle":"white",
     "backgroundColor":"#4682b4"
   }

@@ -10,13 +10,13 @@
             <view class="weui-navbar__title">{{item}}</view>
           </view>
         </block>
-        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft+5.333333333333336}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
       </view>
       <view class="weui-tab__panel">
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
  <block wx:for="{{announcements}}" wx:key="index">
             <!--<view class="weui-cells__title">{{item.ann_title}}</view>-->
-            <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cells weui-cells_after-title style">
               <navigator url='../public/announcement_detail?annc_id={{item.id}}'>
                 <view class="weui-cell">
                   <view class="weui-cell__bd">{{item.ann_title}}</view>
@@ -26,15 +26,14 @@
               </navigator>
 
 
-              <view class='weui_cell'>
-                <view class="weui-cell__ft">
-                  <button class='weui-btn mini-btn' type='defult' size='mini' bindtap='anncreadlist' id="{{item.id}}">家长已阅情况</button>
-                </view>
-              </view>
-
+             
 
             </view>
           </block>
+          <view class="section">
+            <view class="flex-wrp" style="height: 52px;flex-direction:column;">
+            </view>
+          </view>
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
         <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
