@@ -8,13 +8,16 @@ Page({
    */
   data: {
     tabs:[
-       "公告","作业","打卡"
-      //"公告"
+      //  "公告","作业","打卡"
+      "公告"
     ],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
     tabbar: {},
+    classno:0,
+    classname:"",
+    gradeno:"",
     announcements:[
       {
         id:1,
@@ -27,8 +30,6 @@ Page({
         create_time: "2018-07-22 01:00"
       }
     ],
-    classno:0,
-    classname:""
   },
   anncreadlist:function(e){
     console.log(e);
@@ -41,6 +42,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    console.log(options);
     app.editTabBar(); 
     wx.getSystemInfo({
       success: function (res) {
@@ -57,6 +59,7 @@ Page({
               sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
               sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex,
               classno: options.classno,
+              gradeno:options.gradeno,
               announcements:announcements
             });
             console.log(that.data.announcements);
@@ -131,7 +134,7 @@ Page({
 
   addAnnc:function(){
     wx.navigateTo({
-      url: '../public/add_announcement?classno='+this.data.classno+"&classname="+this.data.classname,
+      url: '../public/add_announcement?classno='+this.data.classno+"&classname="+this.data.classname+"&gradeno="+this.data.gradeno,
     })
   }
 })

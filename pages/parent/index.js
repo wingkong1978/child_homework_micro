@@ -7,7 +7,8 @@ Page({
    */
   data: {
     tabs: [
-      "公告", "作业", "打卡"
+      // "公告", "作业", "打卡"
+      "公告"
     ],
     activeIndex: 0,
     sliderOffset: 0,

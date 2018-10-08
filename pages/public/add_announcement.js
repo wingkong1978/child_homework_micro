@@ -14,7 +14,9 @@ Page({
     imagefiles:[],
     recordPath:"",
     classname:"",
-    schoolname:"西关培正小学"
+    schoolname:"西关培正小学",
+    gradeno:"",
+    gradeclass:"",
   },
 
   /**
@@ -23,13 +25,17 @@ Page({
   onLoad: function (options) {
     let that = this;
     
-    console.log(options);
+    console.log("add_announce_onload-->",options);
     wx.getUserInfo({
       success: function (res) {
         that.setData({
           userinfo:res.userInfo,
           classno: options.classno,
-          classname:options.classname
+          classname:options.classname,
+          gradeno:options.gradeno,
+        });
+        that.setData({
+          gradeclass:that.data.gradeno + "年("+that.data.classno + ")班",
         })
       }
     })

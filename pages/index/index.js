@@ -264,8 +264,9 @@ Page({
     ,
   classsubmit: function(userrole) {
     //console.log(this.data.role)
-    let classno = 1;
+    let classno = 4;
     let classname = "二年（4）班";
+    let gradeno = "二"
     let that = this;
     console.log(classname);
     if (userrole == "teacher") {
@@ -273,7 +274,7 @@ Page({
       //判断是否已经设置昵称（什么老师？）
       console.log(1);
       wx.navigateTo({
-        url: '../teacher/index?classno=' + classno + "&classname=" + classname,
+        url: '../teacher/index?classno=' + classno + "&classname=" + classname+"&gradeno="+gradeno,
       })
     } else {
 

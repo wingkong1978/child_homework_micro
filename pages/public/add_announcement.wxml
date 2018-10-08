@@ -1,35 +1,34 @@
 <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
   <view class="page__hd">
-    <view class="page__title border" style='text-align:center'>创建公告</view>
+    <view class="page__title border" style='text-align:center'>新公告</view>
     <view class="page__desc">{{role}}</view>
   </view>
   <view class="page__bd">
-
+  <view class='weui-cells__title' style='color:black'>学校:{{schoolname}} 班级：{{gradeclass}}</view>
     <form bindsubmit='announcementSubmit'>
-      <view class='weui-cells__title' style='color:black'>
-          
-      学校:{{schoolname}} 班级：{{classno}}</view>
+     
+
+      <view class="weui-cells__title">标题</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <input class="weui-input" placeholder="标题" name="title" />
+            <input class="weui-input" name="title" />
           </view>
         </view>
       </view>
-      <view class="weui-cells__title" style='color:black'>公告内容</view>
+
+      <view class="weui-cells__title">公告内容</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell ">
-
           <view class="weui-cell__bd">
-            <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" name="details" />
+            <textarea class="weui-textarea" style="height: 3.3em" name="details" />
             <view class="weui-textarea-counter">0/500</view>
           </view>
         </view>
-
-
-
       </view>
-      <view class="weui-cells">
+
+      <view class="weui-cells__title">图片</view>
+      <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
             <view class="weui-uploader">
@@ -53,8 +52,9 @@
             </view>
           </view>
         </view>
-
       </view>
+
+
 
       <!--
         <view class='weui-cells'>
@@ -68,10 +68,13 @@
         </view>
       -->
       <!-- </view> -->
-<view class='weui-cell'>
-      <button class="wei-btn confirmBtn"  form-type='submit'>提交</button>
-      <button class="wei-btn" form-type='reset' type="default">重设</button>
-      </view>
+      <!-- <view class="weui-cells"> -->
+        <view class='weui-btn-area'>
+          <button class="wei-btn confirmBtn" form-type='submit'>提交</button>
+          <button class="wei-btn" form-type='reset' type="default">重设</button>
+        </view>
+
+      <!-- </view> -->
     </form>
   </view>
 </view>

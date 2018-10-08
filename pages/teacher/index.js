@@ -6,7 +6,8 @@ Page({
    */
   data: {
     classname:"",
-    classno:"",
+    gradeno:"二",
+    classno:"4",
     pwd:"11111"
   },
 
@@ -14,10 +15,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let gradeno = "";
+    let classno = "";
+    if(options.gradeno){
+      gradeno = options.gradeno;
+    }
+    if(options.classno){
+      classno = options.classno;
+    }
+    if(gradeno && classno){
+      
     this.setData({
       classname:options.classname,
-      classno:options.classno
+      gradeno:gradeno,
+      classno:classno,
     })
+    }
   },
 
   /**
@@ -94,7 +107,7 @@ Page({
       })
     }else{
       wx.redirectTo({
-        url: '../teacher/main?role=teacher&classno=' + this.data.classno + "&classname=" + this.data.classname,
+        url: '../teacher/main?role=teacher&classno=' + this.data.classno + "&classname=" + this.data.classname+"&gradeno="+this.data.gradeno,
       });
     }
    
