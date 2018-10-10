@@ -20,7 +20,7 @@
             
 
             <view class="weui-cells weui-cells_after-title style">
-              <navigator url='../public/announcement_detail?annc_id={{item.id}}&unread=5'>
+              <navigator url='../public/announcement_detail?annc_id={{item.id}}&unread={{unread}}'>
                 <view class="weui-cell">
                   <view class="weui-cell__bd">{{item.ann_title}}</view>
                   <view class="weui-cell__ft weui-cell__ft_in-access">{{item.create_time}}</view>
