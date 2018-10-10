@@ -14,19 +14,22 @@
       </view>
       <view class="weui-tab__panel">
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
- <block wx:for="{{announcements}}" wx:key="index">
+        <view>剩余{{unread}}条未读公告</view>
+          <block wx:for="{{announcements}}" wx:key="index">
             <!--<view class="weui-cells__title">{{item.ann_title}}</view>-->
+            
+
             <view class="weui-cells weui-cells_after-title style">
-              <navigator url='../public/announcement_detail?annc_id={{item.id}}'>
+              <navigator url='../public/announcement_detail?annc_id={{item.id}}&unread=5'>
                 <view class="weui-cell">
                   <view class="weui-cell__bd">{{item.ann_title}}</view>
                   <view class="weui-cell__ft weui-cell__ft_in-access">{{item.create_time}}</view>
                 </view>
-
+                
               </navigator>
 
 
-             
+
 
             </view>
           </block>

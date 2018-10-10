@@ -9,7 +9,7 @@ Page({
   data: {
     anncId:0,
     imagefiles:[],
-    
+    read:null
   },
 
   /**
@@ -22,7 +22,7 @@ Page({
     let that = this;
     this.setData({
       anncId:options.annc_id,
-      
+      read:options.unread
     });
     wx.request({
       url: 'http://dev.wingkong.club:3000/announcements/'+this.data.anncId,
@@ -42,6 +42,12 @@ Page({
     })
   },
   confirmRead(){
+    var unread=this.data.read;
+    unread--;
+    wx.redirectTo({
+      url: '../parent/index?unread='+unread,
+    })
+
     wx.request({
       url: 'http://dev.wingkong.club:3000/announcements/'+this.data.anncId,
       method:"POST",
@@ -57,6 +63,9 @@ Page({
       }
     })
   },
+
+
+
   previewImage: function (e) {
     console.log("preview",e);
     wx.previewImage({
