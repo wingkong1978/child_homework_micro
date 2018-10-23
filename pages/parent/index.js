@@ -13,7 +13,6 @@ Page({
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
-    unread:5,
     homeworks: [{
         id: 1,
         title: "作业1",
@@ -29,15 +28,17 @@ Page({
     tabbar: {}
   },
 
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.setData({unread:options.unread});
     app.editTabBar();
     let that = this;
     wx.request({
-      url: 'http://dev.wingkong.club:3000/announcements/classes/' + options.classno,
+      url: 'http://118.89.22.103:3000/announcements/classes/' + options.classno,
       success: function(rst) {
         console.log("announcements-->", rst);
         let announcements = [];
