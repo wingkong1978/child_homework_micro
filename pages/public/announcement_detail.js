@@ -25,14 +25,14 @@ Page({
       read:options.unread
     });
     wx.request({
-      url: 'http://dev.wingkong.club:3000/announcements/'+this.data.anncId,
+      url: app.globalData.remoteUrl+'announcements/'+this.data.anncId,
       success:function(rst){
        
         let rstObj = util.s2o(rst);
         console.log("get announcement", rst);
         let tmpImgfiles= [];
         for(let i=0,len=rst.data.imgFiles.length;i<len;i++){
-          tmpImgfiles.push("http://dev.wingkong.club:3000/_files/"+rst.data.imgFiles[i]);
+          tmpImgfiles.push(app.globalData.remoteUrl+"_files/"+rst.data.imgFiles[i]);
         }
         that.setData({
           imagefiles:tmpImgfiles
@@ -49,7 +49,7 @@ Page({
     })
 
     wx.request({
-      url: 'http://dev.wingkong.club:3000/announcements/'+this.data.anncId,
+      url: app.globalData.remoteUrl+'announcements/'+this.data.anncId,
       method:"POST",
       data:{
         action:"conirmread",

@@ -20,7 +20,7 @@ Page({
       title: '数据读取中...',
     });
     wx.request({
-      url: 'http://dev.wingkong.club:3000/announcements/read/'+options.annc_id,
+      url: app.globalData.remoteUrl+'announcements/read/'+options.annc_id,
       success:function(res){
         console.log("read list -->",res);
         

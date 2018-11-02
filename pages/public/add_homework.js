@@ -34,7 +34,7 @@ Page({
 
     var _this= this;
     const uploadTask = wx.uploadFile({
-      url: 'http://dev.wingkong.club:3000/fileupload',
+      url: app.globalData.remoteUrl+'fileupload',
       filePath: _this.data.files[0],
       name: 'file',
       header: {},

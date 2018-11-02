@@ -92,7 +92,7 @@ Page({
           console.log("upload files result-->",rst);
            parm.imagefiles = rst;
           wx.request({
-            url: 'http://dev.wingkong.club:3000/announcements',
+            url: app.globalData.remoteUrl+'announcements',
             method: "POST",
             data: parm,
             success: function (rst) {
@@ -115,7 +115,7 @@ Page({
   uploadProcess_q:function(filepath){
     let dfr = Q.defer();
     const uploadTask = wx.uploadFile({
-      url: 'http://dev.wingkong.club:3000/fileupload',
+      url: app.globalData.remoteUrl+'fileupload',
       filePath: filepath,
       name: 'file',
       header: {},

@@ -23,7 +23,7 @@ Page({
     console.log("onload-->",parm);
     let that = this;
     wx.request({
-      url: 'http://dev.wingkong.club:3000/schools',
+      url: app.globalData.remoteUrl+'schools',
       success:function(rst){
         console.log(rst);
         let schools = rst.data.rows;

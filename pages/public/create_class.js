@@ -22,7 +22,7 @@ Page({
   
     let that = this;
     wx.request({
-      url: 'http://dev.wingkong.club:3000/classes',
+      url: app.globalData.remoteUrl+'classes',
       method:"POST",
       data:{
         classname: gradeClass,

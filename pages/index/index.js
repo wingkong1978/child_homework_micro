@@ -88,7 +88,7 @@ Page({
   testRemote() {
     var _this = this;
     wx.request({
-      url: 'http://dev.wingkong.club:3000/',
+      url: app.globalData.remoteUrl,
       method: "GET",
       success: function(res) {
         console.log(res);
@@ -105,7 +105,7 @@ Page({
       success: (result) => {
         if (result.code) {
           wx.request({
-            url: "http://dev.wingkong.club:3000/users",
+            url: app.globalData.remoteUrl+"users",
             data: that.data.userInfo,
             method: "POST",
             success: (res) => {
@@ -151,7 +151,7 @@ Page({
                 console.log("res_user-->", res_user)
                 wx.request({
                   //后台接口地址
-                  url: 'http://dev.wingkong.club:3000/openid',
+                  url: app.globalData.remoteUrl+'openid',
                   data: {
                     code: res.code,
                     encryptedData: res_user.encryptedData,
@@ -202,7 +202,7 @@ Page({
                               withCredentials: true,
                               success: function(res_user) {
                                 wx.request({
-                                  url: 'http://dev.wingkong.club:3000/openid',
+                                  url: app.globalData.remoteUrl+'openid',
                                   data: {
                                     code: res_login.code,
                                     encryptedData: res_user.encryptedData,
@@ -283,7 +283,7 @@ Page({
       console.log(2);
 
       wx.request({
-        url: 'http://dev.wingkong.club:3000/classes/' + classno + "/" + this.data.userId,
+        url: app.globalData.remoteUrl+'classes/' + classno + "/" + this.data.userId,
         success: function(res) {
           console.log("check relationship?", res);
           if (res.data.relationshipname != null && false) {

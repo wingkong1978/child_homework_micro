@@ -35,6 +35,7 @@ App({
     })
   },
   globalData: {
+    remoteUrl:"http://homework.wingkong.net.cn:3000/",
     userInfo: null,
     userId:0,
     tabbar:{

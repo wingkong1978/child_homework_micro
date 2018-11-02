@@ -37,7 +37,7 @@ Page({
     let schoolname = options.schoolname;
     let that = this;
     wx.request({
-      url: 'http://dev.wingkong.club:3000/schools/'+schoolid,
+      url: app.globalData.remoteUrl+'schools/'+schoolid,
       success:function(rst){
         let classes = rst.data.rows;
         console.log(classes);
@@ -137,7 +137,7 @@ Page({
       console.log(2);
 
       wx.request({
-        url: 'http://dev.wingkong.club:3000/classes/'+classno +"/"+this.data.userId,
+        url: app.globalData.remoteUrl+'classes/'+classno +"/"+this.data.userId,
         success:function(res){
           console.log("check relationship?",res);
           if(res.data.relationshipname!=null){

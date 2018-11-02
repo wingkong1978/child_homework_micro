@@ -81,7 +81,7 @@ Page({
     let that = this;
     console.log(childnames, relationshipname);
     wx.request({
-      url: 'http://dev.wingkong.club:3000/classes/' + this.data.classno + "/relationship",
+      url: app.globalData.remoteUrl+'classes/' + this.data.classno + "/relationship",
       method: "POST",
       data: {
         userid: this.data.userId,
