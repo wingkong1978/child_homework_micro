@@ -38,7 +38,7 @@ Page({
     app.editTabBar();
     let that = this;
     wx.request({
-      url: 'http://118.89.22.103:3000/announcements/classes/' + options.classno,
+      url: 'http://homework.wingkong.net.cn:3000/announcements/classes/' + options.classno,
       success: function(rst) {
         console.log("announcements-->", rst);
         let announcements = [];
