@@ -29,6 +29,17 @@ Page({
     /*wx.redirectTo({
       url: '/pages/public/school_list?role=parent&userId=' + this.data.userId,
     })*/
+    /*
+    wx.request({
+      url: app.globalData.remoteUrl+'/students/0',
+      method:"GET",
+      success:function(rst){
+        
+      },
+      fail:function(err){
+        
+      }
+    })*/
     this.classsubmit("parent");
   },
   onLoad: function() {

@@ -13,9 +13,9 @@
             <view class="weui-cell">
               <view class="weui-cell__bd">
               <view class='weui-btn-area'>
-                <picker bindchange="bindPickerChange" value="{{childrenindex}}" range="{{children}}">
+                <picker bindchange="bindPickerChange" value="{{children[childrenindex].id}}" range="{{childlistnames}}">
                   <view class="picker">
-                    {{children[childrenindex]}}
+                    请选择
                   </view>
                 </picker>
               </view>
